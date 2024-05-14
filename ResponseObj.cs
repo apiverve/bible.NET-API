@@ -1,21 +1,41 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
+using Newtonsoft.Json;
 
 namespace APIVerve
 {
-    using Newtonsoft.Json;
+public class data
+{
+    [JsonProperty("text")]
+    public string text { get; set; }
+
+    [JsonProperty("book")]
+    public string book { get; set; }
+
+    [JsonProperty("abbr")]
+    public string abbr { get; set; }
+
+    [JsonProperty("chapter")]
+    public int chapter { get; set; }
+
+    [JsonProperty("verses")]
+    public int[] verses { get; set; }
+
+    [JsonProperty("version")]
+    public string version { get; set; }
+
+}
 
 public class ResponseObj
 {
     [JsonProperty("status")]
-    public string Status { get; set; }
+    public string status { get; set; }
 
     [JsonProperty("error")]
-    public string Error { get; set; }
+    public object error { get; set; }
 
     [JsonProperty("data")]
-    public object Data { get; set; }
+    public data data { get; set; }
 
 }
 
