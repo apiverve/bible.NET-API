@@ -70,7 +70,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new bibleQueryOptions {
+var queryOptions = new BibleQueryOptions {
   book = "Genesis",
   chapter = 5,
   verse = 17
@@ -104,7 +104,8 @@ if(response.error != null) {
       17
     ],
     "version": "KJV"
-  }
+  },
+  "code": 200
 }
 ```
 
