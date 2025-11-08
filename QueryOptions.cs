@@ -6,7 +6,7 @@ namespace APIVerve
 {
     public class BibleQueryOptions {
 public string book { get; set; }
-public integer chapter { get; set; }
-public integer verse { get; set; }
+public int chapter { get; set; }
+public int verse { get; set; }
 }
 }
